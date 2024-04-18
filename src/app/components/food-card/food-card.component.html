@@ -1,0 +1,14 @@
+<div class="card" *ngFor="let items of item">
+  <ion-img [src]="items.image"></ion-img>
+
+  <div class="card-content">
+    <h3 class="title">{{ items.title }}</h3>
+    <h2 class="subtitle"><sup>$</sup>{{ items.price|number:'1.2' }}</h2>
+  </div>
+
+  <ion-buttons>
+    <ion-button>
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
