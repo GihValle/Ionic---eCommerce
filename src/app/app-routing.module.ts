@@ -12,8 +12,8 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'liting',
-    loadChildren: () => import('./screens/liting/liting.module').then( m => m.LitingPageModule)
+    path: 'detail',
+    loadChildren: () => import('./screens/detail/detail.module').then( m => m.DetailPageModule)
   },
 ];
 

@@ -6,7 +6,18 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
-  }
+    children:[
+      {
+        path: 'liting',
+        loadChildren: () => import('../screens/liting/liting.module').then( m => m.LitingPageModule)
+      },
+      {
+        path: 'cart',
+        loadChildren: () => import('../screens/cart/cart.module').then( m => m.CartPageModule)
+      },
+    ]
+  },
+
 ];
 
 @NgModule({
